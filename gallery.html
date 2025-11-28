@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Pascii's PC Repair Services</title>
+	
+	<!--Google Font-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!--Bootstrap CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+
+    <!--My style css-->
+    <link rel="stylesheet" href="css/custom.css">
+    
+</head>
+
+<body>
+
+<!--Navigation bar -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark" role="navigation" aria-label="Main navigation">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" alt="Logo" height="70"></a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+        <div class="collapse navbar-collapse" id="main-navigation">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--Header-->
+<header class="py-5 bg-primary text-light text-center">
+    <h1>Gallery</h1>
+    <p>See our past repairs, upgrades, and equipment.</p>
+</header>
+
+<!--Gallery-->
+<section class="py-5">
+    <div class="container">
+	    <h2 class="text-center mb-4">Our Repair Gallery</h2>
+        <div class="row g-4">
+
+      <!-- Pic 1 -->
+            <div class="col-md-4">
+                <img src="images/gallery1.jpg" alt="Custom built pc" class="img-fluid gallery-img" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="changeImage('images/gallery1.jpg')">
+            </div>
+
+      <!--Pic 2-->
+            <div class="col-md-4">
+                <img src="images/gallery2.jpg" alt="Inside of case" class="img-fluid gallery-img" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="changeImage('images/gallery2.jpg')">
+            </div>
+
+      <!--Pic 3-->
+            <div class="col-md-4">
+                <img src="images/gallery3.jpg" alt="Custom built pc" class="img-fluid gallery-img" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="changeImage('images/gallery3.jpg')">
+            </div>
+
+      <!--Pic 4-->
+            <div class="col-md-4">
+                <img src="images/gallery4.jpg" alt="Custom built pc" class="img-fluid gallery-img" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="changeImage('images/gallery4.jpg')">
+            </div>
+      
+	  <!--Pic 5-->
+            <div class="col-md-4">
+                <img src="images/gallery5.jpg" alt="Tinkering in case" class="img-fluid gallery-img" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="changeImage('images/gallery5.jpg')">
+            </div>
+      
+	  <!--Pic 6-->
+            <div class="col-md-4">
+                <img src="images/gallery6.jpg" alt="Fixing motherboard" class="img-fluid gallery-img" loading="lazy" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="changeImage('images/gallery6.jpg')">
+            </div>
+        </div>
+    </div>
+</section>
+<!--Image Modal-->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true" role="dialog" aria-label="Gallery image view">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content bg-dark">
+            <div class="modal-body p-0" role="img" aria-label="Enlarged gallery view">
+                <img id="modalImage" src="image/gallery1.jpg" alt="Enlarged gallery view" class="img-fluid w-100">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function changeImage(src) {
+    document.getElementById("modalImage").src = src;
+}
+</script>
+
+<!--Footer-->
+<footer class="bg-dark text-light py-4 text-center" role="contentinfo">
+    <p>&copy; <span id="year"></span> Pascii's PC Repair Services. All rights reserved.</p>
+</footer>
+
+<!--Back to the top button-->
+<button id="backToTop" class="btn btn-primary" style="display:none; position:fixed; bottom:20px; right:20px; z-index:999;">Back To Top</button>
+
+<!--Bootstrap js-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<!--My custom js-->
+<script src="js/script.js?v=1.0"></script>
+
+</body>
+</html>
